@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuProfil"
+        android:title="Profil"
+        android:icon="@drawable/ic_person"/>
+
+    <item
+        android:id="@+id/menuNotifikacije"
+        android:title="Notifikacije"
+        android:icon="@drawable/ic_notifications"/>
+
+    <item
+        android:id="@+id/menuVoznje"
+        android:title="Pregled vožnji"
+        android:icon="@drawable/ic_person"/>
+    <item
+        android:id="@+id/menuONama"
+        android:title="O nama"
+        android:icon="@drawable/ic_payment"/>
+    <item
+        android:id="@+id/menuLogOut"
+        android:title="Odjavi se"
+        android:icon="@drawable/ic_logoff"/>
+
+</menu>

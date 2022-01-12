@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15sp"
+    android:layout_marginTop="40sp"
+    android:layout_marginRight="5sp"
+    android:background="@drawable/borders_light"
+    android:paddingLeft="10sp"
+    >
+
+    <TextView
+        android:id="@+id/labelPocetnaAdresa"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/inputPocetnaAdresa"
+        android:layout_alignTop="@id/inputPocetnaAdresa"
+        android:layout_marginTop="20sp"
+        android:text="@string/labelPocetnaAdresa"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#FFDBDAEA"
+        android:background="#00FFFFFF"
+
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/inputPocetnaAdresa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@id/labelPocetnaAdresa"
+        android:backgroundTint="#FFDBDAEA"
+        android:textColor="#FFDBDAEA"
+        android:ems="20"
+        android:inputType="textMultiLine"
+        android:paddingRight="15sp" />
+
+    <TextView
+        android:id="@+id/labelKrajnjaAdresa"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/inputKrajnjaAdresa"
+        android:layout_marginTop="50sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#FFDBDAEA"
+        android:background="#00FFFFFF"
+        android:text="@string/labelKrajnjaAdresa"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/inputKrajnjaAdresa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputPocetnaAdresa"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5sp"
+        android:layout_toRightOf="@id/labelKrajnjaAdresa"
+        android:ems="10"
+        android:backgroundTint="#FFDBDAEA"
+        android:textColor="#FFDBDAEA"
+        android:inputType="textMultiLine"
+        android:paddingRight="15sp" />
+
+    <TextView
+        android:id="@+id/labelVreme"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelKrajnjaAdresa"
+        android:layout_alignBaseline="@id/inputVreme"
+        android:layout_marginTop="40sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#FFDBDAEA"
+        android:background="#00FFFFFF"
+        android:text="@string/labelVreme"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/inputVreme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputKrajnjaAdresa"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5sp"
+        android:paddingRight="15sp"
+        android:backgroundTint="#FFDBDAEA"
+        android:textColor="#FFDBDAEA"
+        android:layout_toRightOf="@id/labelVreme"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/labelStatus"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelVreme"
+        android:layout_alignBaseline="@id/inputStatus"
+        android:layout_marginTop="20sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#FFDBDAEA"
+        android:background="#00FFFFFF"
+        android:text="@string/statusVoznje"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/inputStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputVreme"
+        android:backgroundTint="#FFDBDAEA"
+        android:textColor="#FFDBDAEA"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5sp"
+        android:paddingRight="15sp"
+        android:layout_toRightOf="@id/labelStatus"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/labelOcena"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelStatus"
+        android:layout_marginTop="30sp"
+        android:text="@string/labelOcenaa"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#FFDBDAEA"
+        android:background="#00FFFFFF"
+        android:visibility="gone"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/labelObavestenje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelStatus"
+        android:layout_marginTop="30sp"
+        android:layout_marginBottom="15sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#FFDBDAEA"
+        android:background="#00FFFFFF"
+        android:text="@string/labelObavestenje"
+        android:visibility="gone"
+        android:textSize="18sp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelOcena"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"
+        android:numStars="5"
+        android:stepSize="1"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/labelPromena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelOcena"
+        android:layout_alignBaseline="@id/ratingBar"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="20sp"
+        android:layout_toRightOf="@id/ratingBar"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#FFDBDAEA"
+        android:background="#00FFFFFF"
+        android:text="@string/labelLink"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+</RelativeLayout>

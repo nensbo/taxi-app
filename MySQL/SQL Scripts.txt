@@ -1,0 +1,155 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema Taxi
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema Taxi
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `Taxi` DEFAULT CHARACTER SET utf8 ;
+USE `Taxi` ;
+
+-- -----------------------------------------------------
+-- Table `Taxi`.`korisnik`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Taxi`.`korisnik` (
+  `korisnik_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `ime` VARCHAR(64) NOT NULL,
+  `prezime` VARCHAR(64) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `telefon` VARCHAR(45) NOT NULL,
+  `sifra` VARCHAR(45) NOT NULL,
+  `adresa` VARCHAR(45) NULL,
+  `token` VARCHAR(1024) NOT NULL,
+  PRIMARY KEY (`korisnik_id`),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC),
+  UNIQUE INDEX `phone_UNIQUE` (`telefon` ASC))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Taxi`.`vozilo`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Taxi`.`vozilo` (
+  `vozilo_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `model_i_tip_vozila` VARCHAR(256) NOT NULL,
+  `registarski_broj` VARCHAR(256) NOT NULL,
+  `ekolosko_vozilo` TINYINT NOT NULL,
+  `sediste_za_bebe` TINYINT NOT NULL,
+  `broj_sedista` INT NOT NULL,
+  PRIMARY KEY (`vozilo_id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Taxi`.`vozac`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Taxi`.`vozac` (
+  `vozac_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `vozilo_id` INT UNSIGNED NOT NULL,
+  `ime` VARCHAR(64) NOT NULL,
+  `prezime` VARCHAR(64) NOT NULL,
+  `email` VARCHAR(64) NOT NULL,
+  `telefon` VARCHAR(64) NOT NULL,
+  `sifra` VARCHAR(45) NOT NULL,
+  `adresa` VARCHAR(45) NOT NULL,
+  `slika` LONGBLOB NULL,
+  `godine_starosti` INT NOT NULL,
+  `godine_iskustva` INT NOT NULL,
+  `strani_jezik` VARCHAR(45) NULL,
+  `status` VARCHAR(45) NULL DEFAULT 'neaktivan',
+  `trenutna_adresa_lat` DOUBLE(10,8) NULL,
+  `trenutna_adresa_lon` DOUBLE(10,8) NULL,
+  `token` VARCHAR(1024) NOT NULL,
+  PRIMARY KEY (`vozac_id`),
+  UNIQUE INDEX `telefon_UNIQUE` (`telefon` ASC),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC),
+  INDEX `fk_vozac_vozilo_id_idx1` (`vozilo_id` ASC),
+  CONSTRAINT `fk_vozac_vozilo_id`
+    FOREIGN KEY (`vozilo_id`)
+    REFERENCES `Taxi`.`vozilo` (`vozilo_id`)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Taxi`.`voznja_detalji`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Taxi`.`voznja_detalji` (
+  `voznja_detalji_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `vreme_rezervacije` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `trajanje_voznje` INT NOT NULL,
+  `vreme_pocetak` TIME NULL,
+  `vreme_kraj` TIME NULL,
+  `pocetna_adresa_lat` DOUBLE(10,8) NOT NULL,
+  `pocetna_adresa_lon` DOUBLE(10,8) NOT NULL,
+  `krajnja_adresa_lat` DOUBLE(10,8) NOT NULL,
+  `krajnja_adresa_lon` DOUBLE(10,8) NOT NULL,
+  PRIMARY KEY (`voznja_detalji_id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Taxi`.`voznja_dodaci`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Taxi`.`voznja_dodaci` (
+  `voznja_dodaci_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `sediste_za_bebe` TINYINT NULL,
+  `broj_sedista` INT NULL,
+  `ekolosko_vozilo` TINYINT NULL,
+  `strani_jezik` VARCHAR(45) NULL,
+  PRIMARY KEY (`voznja_dodaci_id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Taxi`.`voznja`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Taxi`.`voznja` (
+  `voznja_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `korisnik_id` INT UNSIGNED NOT NULL,
+  `voznja_dodaci_id` INT UNSIGNED NULL,
+  `voznja_detalji_id` INT UNSIGNED NOT NULL,
+  `vozac_id` INT UNSIGNED NULL,
+  `ocena` INT NULL,
+  `komentar` VARCHAR(500) NULL,
+  `status` VARCHAR(45) NOT NULL DEFAULT 'cekanje',
+  `cena_po_km` INT NOT NULL DEFAULT 30,
+  `cena_start` INT NOT NULL DEFAULT 100,
+  PRIMARY KEY (`voznja_id`),
+  INDEX `fk_voznja_korisnik_id_idx` (`korisnik_id` ASC),
+  INDEX `fk_voznja_voznja_detalji_id_idx` (`voznja_detalji_id` ASC),
+  INDEX `fk_voznja_vozac_id_idx` (`vozac_id` ASC),
+  INDEX `fk_voznja_voznja_dodaci_id_idx` (`voznja_dodaci_id` ASC),
+  CONSTRAINT `fk_voznja_vozac_id`
+    FOREIGN KEY (`vozac_id`)
+    REFERENCES `Taxi`.`vozac` (`vozac_id`)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_voznja_korisnik_id`
+    FOREIGN KEY (`korisnik_id`)
+    REFERENCES `Taxi`.`korisnik` (`korisnik_id`)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_voznja_voznja_detalji_id`
+    FOREIGN KEY (`voznja_detalji_id`)
+    REFERENCES `Taxi`.`voznja_detalji` (`voznja_detalji_id`)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_voznja_voznja_dodaci_id`
+    FOREIGN KEY (`voznja_dodaci_id`)
+    REFERENCES `Taxi`.`voznja_dodaci` (`voznja_dodaci_id`)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

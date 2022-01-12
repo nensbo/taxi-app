@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/pozadinanova"
+    tools:context=".activity.ONamaActivity">
+
+
+
+    <TextView
+        android:id="@+id/labelONamaNaslov"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="80sp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/oNamaNaslov"
+        android:textColor="#FFDBDAEA"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/inputONama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70sp"
+        android:background="@drawable/borders_light"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:inputType="textMultiLine"
+        android:paddingLeft="15sp"
+        android:paddingRight="15sp"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:text="@string/oNamaDetalji"
+        android:textColor="#FFDBDAEA"
+        android:textSize="24sp" />
+
+</LinearLayout>

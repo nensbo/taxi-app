@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Taxi</string>
+    <string name="naziv">Taxi služba</string>
+    <string name="zakazi">Zakazivanje vožnje</string>
+    <string name="naslov">Da bi zakazali vožnju unesite sledeće podatke:</string>
+    <string name="pregledNotifikacija">Pregled vaših notifikacija</string>
+    <string name="oNamaNaslov">O nama:</string>
+    <string name="oNamaDetalji">Naša firma postoji od 2020. godine. Centar poslovanja je u Beogradu. Broji 50 zaposlenih. Naši vozači su pouzdani, odgovorni i tačni. Naša vozila zadovoljavaju sve propisane standarde. U cilju nam je da svojim korisnicima obezbedimo ugodnu i brzu uslugu. Svaka kritika je dobrodošla. </string>
+    <string name="KorisnickoIme">Korisničko ime</string>
+    <string name="sifra">Šifra</string>
+    <string name="ime">Uneti ime</string>
+    <string name="imeiprezime">Ime i prezime</string>
+    <string name="korisnickoime">Korisničko ime</string>
+    <string name="prezime">Uneti prezime</string>
+    <string name="email">Uneti E-mail adresu</string>
+    <string name="sifraRegistracija">Uneti šifru</string>
+    <string name="telefon">Uneti broj telefona</string>
+    <string name="adresa">Uneti adresu</string>
+    <string name="slika">Dodajte Vašu sliku</string>
+    <string name="registracijaTipVozac">Registrujte se kao vozač</string>
+    <string name="buttonRegistracija">Registruj se</string>
+    <string name="procena_voznje">Procena vožnje</string>
+    <string name="adresaPocetna">Uneti početnu lokaciju (Opština)</string>
+    <string name="ulica">Uneti ulicu i broj</string>
+    <string name="vreme">Uneti vreme početka vožnje</string>
+    <string name="datum">Uneti datum vožnje</string>
+    <string name="potvrdi">Uloguj se</string>
+    <string name="labelNaslovRegistracija">Registracija</string>
+    <string name="buttonIzaberi">Izaberi</string>
+    <string name="labelRegistracija">Nemate nalog? Registruj se</string>
+    <string name="tipVozac">Ulogujte se kao vozač</string>
+    <string name="registracijaVozac">Registrujte se kao vozač</string>
+    <string name="godineStarosti">Uneti godine starosti</string>
+    <string name="godineIskustva">Uneti godine iskustva</string>
+    <string name="straniJezik">Uneti koji strani jezik govorite (nije obavezno)</string>
+    <string name="modelVozila">Uneti model i tip vozila</string>
+    <string name="registarskiBroj">Uneti registarski broj vozila</string>
+    <string name="brojSedista">Uneti broj sedišta</string>
+    <string name="ekoloskoVozilo">Da li vozilo zadovoljava ekološke standarde?</string>
+    <string name="sedisteZaBebe">Da li vozilo ima sedište za bebe?</string>
+    <string name="tipKlijent">Ulogujte se kao korisnik usluge vožnje</string>
+    <string name="dodaciEkoloskoVozilo">Želite li ekološko vozilo?</string>
+    <string name="dodaciSedisteBebe">Želite li sedište za bebe?</string>
+    <string name="dodaciSedista">Želite li vozilo sa 7 sedišta?</string>
+    <string name="dodaciJezik">Želite li vozača koji govori strani jezik?</string>
+    <string name="engleski">English</string>
+    <string name="francuski">French</string>
+    <string name="ruski">Russian</string>
+    <string name="spanski">Spanish</string>
+    <string name="dodaci">Dodatne pogodnosti</string>
+
+    <string name="buttonPotvrdi">Potvrdi</string>
+    <string name="addKorisnik">Korisnik je dodat</string>
+    <string name="noKorisnik">Korisničko ime i šifra nisu pronađeni. Pokušajte ponovo!</string>
+    <string name="errorInternet">Proverite internet konekciju!</string>
+    <string name="addDetaljiVoznje">Detalji Vožnje uspešno dodati</string>
+    <string name="noDetaljiVoznje">Detalji Vožnje nisu uspešno dodati</string>
+    <string name="noVozilo">Nema vozila koja saobraćaju na ovoj opštini</string>
+    <string name="staraAdresa">Uneti već korišćenu adresu</string>
+    <string name="novaAdresa">Uneti novu adresu</string>
+    <string name="labelOcena">Ocenite kvalitet voznje:</string>
+    <string name="labelKomentar">Unesite dodatni komentar:</string>
+    <string name="labelPregledVoznji">Pregled dosadašnjih vožnji</string>
+    <string name="labelPocetnaAdresa">Početna adresa:</string>
+    <string name="labelKrajnjaAdresa">Krajnja adresa:</string>
+    <string name="labelVreme">Vreme vožnje:</string>
+    <string name="statusVoznje">Status vožnje:</string>
+    <string name="labelOcenaa">Ocena vožnje</string>
+    <string name="labelObavestenje">Opcija ocenjivanja vožnje biće dostupna po završetku vožnje!</string>>
+    <string name="labelLink">Promeniti ocenu</string>
+    <string name="noVoznje">Korisnik nema voznji</string>
+    <string name="back">Nazad</string>
+    <string name="pregled">Pregled vožnji</string>
+    <string name="azuriranje">Izmeni podatke</string>
+    <string name="izlaz">Izađi</string>
+    <string name="title_activity_driver_maps">Map</string>
+    <string name="app_bar_nav_open">open</string>
+    <string name="app_bar_nav_close">open</string>
+    <string name="pronadji">Pronadji</string>
+    <string name="pronadjiVoznju">Pronađi vožnju</string>
+    <string name="preuzetaVoznja">Preuzeta vožnja</string>
+    <string name="zavrsenaVoznja">Završena vožnja</string>
+    <string name="prekidVoznje">Prekid vožnje</string>
+    <string name="pocetnaLokacija">Početna lokacija</string>
+    <string name="krajnjaLokacija">Krajnja lokacija</string>
+    <string name="procenaVoznje">Procena vožnje</string>
+    <string name="zakaziVoznju">Zakaži vožnju</string>
+
+
+
+
+
+
+
+</resources>

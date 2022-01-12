@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/pozadinanova"
+    tools:context=".activity.PregledVoznjeActivity">
+
+    <TextView
+        android:id="@+id/labelOcena"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:layout_marginTop="100sp"
+        android:paddingLeft="10sp"
+        android:textColor="#FFDBDAEA"
+        android:text="@string/labelOcena"
+        android:textSize="25sp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="5sp"
+        android:numStars="5"
+        android:stepSize="1" />
+
+    <TextView
+        android:id="@+id/labelKomentar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:paddingLeft="10sp"
+        android:textColor="#FFDBDAEA"
+        android:text="@string/labelKomentar"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/inputKomentar"
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:layout_gravity="top"
+        android:paddingLeft="10sp"
+        android:background="@drawable/borders_light"
+        android:textColor="#FFDBDAEA"
+        android:ems="10"
+        android:lines="10" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20sp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonOcena"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40sp"
+            android:text="@string/buttonPotvrdi" />
+
+        <Button
+            android:id="@+id/buttonOtkazi"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40sp"
+            android:text="Otkaži" />
+
+    </LinearLayout>
+
+</LinearLayout>

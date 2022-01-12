@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutNavigacijaNaslov"
+    android:layout_width="match_parent"
+    android:layout_height="110sp"
+    android:background="@drawable/pozadinanova"
+    android:paddingTop="35sp">
+
+    <ImageView
+        android:id="@+id/imageRounded"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="5sp"
+        android:layout_marginLeft="10sp"
+        android:background="@drawable/round_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_person" />
+
+    <View
+        android:id="@+id/viewSupporter"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/labelMenuKorisnickoIme"
+        android:layout_marginTop="15sp" />
+
+    <TextView
+        android:id="@+id/labelImeIPrezime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="15sp"
+        android:layout_toRightOf="@id/imageRounded"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/imeiprezime"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/labelMenuKorisnickoIme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelImeIPrezime"
+        android:layout_alignLeft="@id/labelImeIPrezime"
+        android:layout_toRightOf="@id/imageRounded"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/korisnickoime"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProfilActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pozadinanova"
+            android:orientation="vertical">
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="110sp"
+                layout="@layout/navigacija_naslov" />
+
+            <EditText
+                android:id="@+id/inputIme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="30sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="5sp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="15sp"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/inputPrezime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="5sp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="15sp"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/inputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="5sp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="15sp"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/inputSifra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="5sp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:paddingLeft="15sp"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/inputPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="5sp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:inputType="phone"
+                android:paddingLeft="15sp"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:textSize="18sp" />
+
+
+
+
+            <EditText
+                android:id="@+id/inputAdresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="5sp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:paddingLeft="15sp"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:textSize="18sp" />
+
+
+            <LinearLayout
+                android:id="@+id/layoutVozac"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/labelSlika"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginBottom="5sp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/slika"
+                    android:textColor="#FFDBDAEA"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:layout_width="409dp"
+                    android:layout_height="match_parent"
+                    tools:layout_editor_absoluteX="1dp">
+
+                    <EditText
+                        android:id="@+id/inputSlika"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20sp"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginEnd="20sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginBottom="5sp"
+                        android:background="@drawable/input_bg"
+                        android:ems="10"
+                        android:paddingLeft="15sp"
+                        android:paddingTop="5sp"
+                        android:paddingRight="60sp"
+                        android:paddingBottom="5sp"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/buttonSlika"
+                        android:layout_width="wrap_content"
+                        android:layout_height="28sp"
+                        android:layout_alignTop="@id/inputSlika"
+                        android:layout_alignRight="@id/inputSlika"
+                        android:layout_alignBottom="@id/inputSlika"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginEnd="25dp"
+                        android:layout_marginRight="25dp"
+                        android:background="@color/cardview_shadow_end_color"
+                        android:fontFamily="sans-serif-black"
+                        android:text="@string/buttonIzaberi"
+                        android:textColor="#FFDBDAEA"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+
+                <EditText
+                    android:id="@+id/inputGodineStarosti"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginEnd="20sp"
+                    android:layout_marginRight="20sp"
+                    android:layout_marginBottom="5sp"
+                    android:background="@drawable/input_bg"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:paddingLeft="15sp"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:textSize="18sp" />
+
+
+                <EditText
+                    android:id="@+id/inputGodineIskustva"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginEnd="20sp"
+                    android:layout_marginRight="20sp"
+                    android:layout_marginBottom="5sp"
+                    android:background="@drawable/input_bg"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:paddingLeft="15sp"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:textSize="18sp" />
+
+
+                <EditText
+                    android:id="@+id/inputStraniJezik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginEnd="20sp"
+                    android:layout_marginRight="20sp"
+                    android:layout_marginBottom="5sp"
+                    android:background="@drawable/input_bg"
+                    android:ems="10"
+                    android:paddingLeft="15sp"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:textSize="18sp" />
+
+
+                <EditText
+                    android:id="@+id/inputModelVozila"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginEnd="20sp"
+                    android:layout_marginRight="20sp"
+                    android:layout_marginBottom="5sp"
+                    android:background="@drawable/input_bg"
+                    android:ems="10"
+                    android:paddingLeft="15sp"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:textSize="18sp" />
+
+
+                <EditText
+                    android:id="@+id/inputRegistarskiBroj"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginEnd="20sp"
+                    android:layout_marginRight="20sp"
+                    android:layout_marginBottom="5sp"
+                    android:background="@drawable/input_bg"
+                    android:ems="10"
+                    android:paddingLeft="15sp"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:textSize="18sp" />
+
+
+                <EditText
+                    android:id="@+id/inputBrojSedista"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginEnd="20sp"
+                    android:layout_marginRight="20sp"
+                    android:layout_marginBottom="5sp"
+                    android:background="@drawable/input_bg"
+                    android:ems="10"
+                    android:paddingLeft="15sp"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:textSize="18sp" />
+
+                <Switch
+                    android:id="@+id/switchVozilo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginEnd="20sp"
+                    android:layout_marginRight="20sp"
+                    android:layout_marginBottom="5sp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/ekoloskoVozilo"
+                    android:textColor="#FFDBDAEA"
+                    android:textSize="18sp" />
+
+                <Switch
+                    android:id="@+id/switchSediste"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginEnd="20sp"
+                    android:layout_marginRight="20sp"
+                    android:layout_marginBottom="5sp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/sedisteZaBebe"
+                    android:textColor="#FFDBDAEA"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonAzuriranje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="30sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:background="@drawable/btn"
+                android:text="@string/azuriranje"
+                android:textColor="#C60B0B0B"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

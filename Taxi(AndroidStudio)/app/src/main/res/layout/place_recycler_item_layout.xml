@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/placeItemView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15sp"
+    android:layout_marginRight="15sp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+ >
+
+    <TextView
+        android:id="@+id/place_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:paddingTop="5sp"
+        android:text="@string/pronadji"
+        android:textColor="@color/bojaPozadina"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/place_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10sp"
+        android:paddingTop="5sp"
+        android:paddingRight="10sp"
+        android:text="Pronadji"
+        android:textColor="@color/bojaPozadinaTamnaTransparentna"
+        android:textSize="14sp" />
+
+
+</LinearLayout>
